@@ -1,0 +1,18 @@
+<div class="container">
+  <form [formGroup]="personForm" >
+    <div class="col-12">
+      <div class="form-group">
+        <input class="row input-group-text form-control" style="margin-top: 5px;" placeholder="Фамилия" type="text" formControlName="surname" />
+        <input class="row input-group-text form-control" style="margin-top: 5px;" placeholder="Имя" type="text" formControlName="name" />
+        <input class="row input-group-text form-control" style="margin-top: 5px;" placeholder="Отчество" type="text" formControlName="lastname" />
+        <input class="row input-group-text form-control" style="margin-top: 5px;" maxlength="11" placeholder="Телефон" type="text" formControlName="tel" />
+        <input class="row input-group-text form-control shadow-none" style="margin-top: 5px;" type="checkbox" formControlName="flag" />
+        <input class="row input-group-text form-control" style="margin-top: 4px;" maxlength="40" placeholder="Заметка" type="text" formControlName="comments" />
+      </div>
+    </div>
+    <div class="col-12" style="margin-left: -1.3%;">
+      <button [disabled]="!personForm.valid" *ngIf="id==0" type="button" class="btn btn-success btn-lg btn-block" (click)="onAddForm()" >Добавить</button>
+      <button *ngIf="id>0" type="button"  class="btn btn-success btn-lg btn-block" (click)="onSaveForm()">Сохранить</button>
+    </div>
+  </form>
+</div>

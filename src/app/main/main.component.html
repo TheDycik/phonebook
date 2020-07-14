@@ -1,0 +1,20 @@
+<div class="container">
+  <input  style="margin-top: 10px;" type="text" [(ngModel)]="searchName" (blur)="changeFilter()">
+  <!-- <button style="margin-left: 5px;" type="button" class="btn btn-primary" (click)='changeFavorite()'>Избранные</button> -->
+  <button  style="margin-left: 5px;" type="button" class="btn btn-primary"  (click)='changerSearch()'>
+    <ng-container *ngIf="sortFlag==1">По имени</ng-container>
+    <ng-container *ngIf="sortFlag==2">По фамилии</ng-container>
+    <ng-container *ngIf="sortFlag==3">Общий</ng-container>
+  </button>
+
+  <!-- <button  style="margin-left: 5px;" type="button" class="btn btn-primary"  (click)='back()'>По умолчанию</button> -->
+  <!-- blur - это отслеживание того,что ты нажал на окно и отпустил его -->
+  <!-- <p style="word-spacing: 20px;">Имя Фамиля Отчество Телефон Заметка</p> -->
+  <hr>
+  <p *ngFor="let person of persons | personPipe : searchName">
+    <a style="word-spacing: 11px;font-size: 20px" [routerLink]="['/include', person.id]">{{ person.surname }}  {{ person.name }} {{person.lastname}} {{ person.tel }} {{person.comments}} 
+      <ng-container *ngIf="person.flag===true">★</ng-container>
+    </a>
+    <button  type="button" class="btn btn-danger float-right" (click)='delPerson(person.id)'>Удалить</button>
+  </p> 
+</div>

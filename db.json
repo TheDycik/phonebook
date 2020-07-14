@@ -1,0 +1,70 @@
+{
+  "filter": [
+    {
+      "searchStr": "",
+      "id": 1
+    }
+  ],
+  "sort": [
+    {
+      "sortFlag": 3,
+      "id": 1
+    }
+  ],
+  "notes": [
+    {
+      "name": "Ivan",
+      "surname": "Ivanov",
+      "morename": "Ivanovich",
+      "tel": "89993333333",
+      "flag": false,
+      "comments": "something",
+      "id": 3
+    },
+    {
+      "name": "Ivan",
+      "surname": "Umer",
+      "morename": "Alexseevich",
+      "tel": "98273377212",
+      "flag": true,
+      "comments": "22222",
+      "id": 4
+    },
+    {
+      "name": "Георгий",
+      "surname": "Чудаков",
+      "morename": "Алексеевич",
+      "tel": "21313213212",
+      "flag": false,
+      "comments": "1",
+      "id": 10
+    },
+    {
+      "name": "Влад",
+      "surname": "Владин",
+      "morename": "Владов",
+      "tel": "32113221323",
+      "flag": true,
+      "comments": "231",
+      "id": 11
+    },
+    {
+      "name": "Анна",
+      "surname": "Янова",
+      "morename": "Алексеевна",
+      "tel": "43224332443",
+      "flag": true,
+      "comments": "324",
+      "id": 13
+    },
+    {
+      "name": "Елизавета",
+      "surname": "Петренко",
+      "morename": "Петровна",
+      "tel": "21321323123",
+      "flag": true,
+      "comments": "32",
+      "id": 14
+    }
+  ]
+}
